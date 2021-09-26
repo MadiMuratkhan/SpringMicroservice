@@ -5,5 +5,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public class RepositoryExchaneValue {
     public interface ExchangeValueRepository extends
 
-            JpaRepository<ExchangeValue, Long>{ }
+            JpaRepository<ExchangeValue, Long>{
+
+        ExchangeValue findByFromAndTo(String from, String to);
+    }
 }
